@@ -5,11 +5,23 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 
-public class Firefoxexample {
+public class Firefoxexample extends DriverClass{
+	//class variable
+	int myage=0;
+	public static WebDriver driver = null;
 
 	public static void main(String[] args) throws Exception{
 		// TODO Auto-generated method stub 
-		WebDriver driver = new FirefoxDriver();
+		//WebDriver driver = new FirefoxDriver();
+		
+		//DriverClass drv = new DriverClass();
+		//instance variable
+		//WebDriver driver = drv.GetDriver();
+		
+		//method variable or local variable
+		int age = 0;
+		driver = GetDriver();
+		
 		driver.get("http://www.google.com");
 		WebElement element=driver.findElement(By.name("q"));
 		element.sendKeys("books");

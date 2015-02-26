@@ -1,0 +1,23 @@
+package webdriverDropdowns;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class SelectByIndexExample {
+
+	   public static void main(String [] args)
+	{
+   	WebDriver driver = new FirefoxDriver();
+   	driver.get("file:///E:/nano/Batch2/exampleTemplates/selectbyvaluedemo.html");
+   	
+   	WebElement dropdown=driver.findElement(By.name("Mobiles"));
+   	
+   	//List<WebElement> dlist= element.getOptions();
+   	Select se=new Select(dropdown);
+   	se.selectByIndex(3);
+ 	}
+}
+
